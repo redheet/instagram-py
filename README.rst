@@ -109,6 +109,8 @@
 ::
 
  $ sudo easy_install3 -U pip # you have to install python3-setuptools , update pip
+  note :
+  https://pypi.org/simple/pip/ #download pip if dosen't work and move to /usr/local/lib/your_python version/dist-packages/
  $ sudo pip3 install requests --upgrade
  $ sudo pip3 install requests[socks]
  $ sudo pip3 install stem
