@@ -151,8 +151,8 @@ open your **tor configuration** file usually located at **/etc/tor/torrc**
 
 
 ::
- 
- $ sudo vim /etc/tor/torrc # open it with your text editor
+ $ sudo cp instapy-config.json /root
+ $ sudo nano /etc/tor/torrc.orig # open it with your text editor
  
 
 **search** for the file for this **specific section**
@@ -161,7 +161,8 @@ open your **tor configuration** file usually located at **/etc/tor/torrc**
 
  ## The port on which Tor will listen for local connections from Tor
  ## controller applications, as documented in control-spec.txt.
- #ControlPort 9051
+ #ControlPort 9051 remove # 
+ ControlPort 9051
  
 **uncomment** 'ControlPort' by deleting the **#** before 'ControlPort' , **now save the file and restart your tor server**
 
@@ -180,6 +181,7 @@ open your **tor configuration** file usually located at **/etc/tor/torrc**
 
 ::
 
+ $ sudo service tor start && sudo service tor status
  $ instagram-py -u your_account_username -pl path_to_password_list
 
 
